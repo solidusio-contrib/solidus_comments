@@ -16,9 +16,9 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   spree_version = '~> 2.4.2'
-  s.add_dependency 'spree_api', spree_version
-  s.add_dependency 'spree_backend', spree_version
-  s.add_dependency 'spree_core', spree_version
+  s.add_runtime_dependency 'solidus_core', ["~> 1.0"]
+  s.add_runtime_dependency 'solidus_backend', ["~> 1.0"]
+  s.add_runtime_dependency 'solidus_api', ["~> 1.0"]
   s.add_dependency 'acts_as_commentable', '4.0.1'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'sqlite3'
