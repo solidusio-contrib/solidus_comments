@@ -19,13 +19,13 @@ Installation
 
 Add the following to your Gemfile (or check Versionfile for Spree versions requirements):
 
-    gem "spree_comments", github: 'spree/spree_comments'
+    gem "solidus_comments"
 
 Run:
 
 ```shell
 bundle install
-bundle exec rails g spree_comments:install
+bundle exec rails g solidus_comments:install
 ```
 
 Run the migrations if you did not during the installation generator:

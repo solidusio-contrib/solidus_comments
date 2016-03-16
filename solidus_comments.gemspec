@@ -6,16 +6,15 @@ Gem::Specification.new do |s|
   s.summary   = 'Adds comments to the solidus admin'
   s.required_ruby_version = '>= 2.1'
 
-  s.author    = 'Rails Dog'
-  s.email     = 'gems@railsdog.com'
-  s.homepage  = 'https://github.com/spree/spree_comments'
+  s.author    =  [ 'Rails Dog', 'Solidus Contrib' ]
+  s.email     = 'contact+comments@solidus.io'
+  s.homepage  = 'https://github.com/solidusio-contrib/solidus_comments'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path  = 'lib'
   s.requirements << 'none'
 
-  spree_version = '~> 2.4.2'
   s.add_runtime_dependency 'solidus_core', ["~> 1.0"]
   s.add_runtime_dependency 'solidus_backend', ["~> 1.0"]
   s.add_runtime_dependency 'solidus_api', ["~> 1.0"]

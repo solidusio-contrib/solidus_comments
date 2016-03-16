@@ -1,6 +1,6 @@
-module SpreeComments
+module SolidusComments
   class Engine < Rails::Engine
-    engine_name 'spree_comments'
+    engine_name 'solidus_comments'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
@@ -18,4 +18,3 @@ module SpreeComments
     config.to_prepare &method(:activate).to_proc
   end
 end
-
