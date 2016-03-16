@@ -1,10 +1,10 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform  = Gem::Platform::RUBY
-  s.name      = 'spree_comments'
-  s.version   = '2.0.0'
-  s.summary   = 'Comments for orders and shipments'
-  s.required_ruby_version = '>= 1.8.7'
+  s.name      = 'solidus_comments'
+  s.version   = '1.0.0'
+  s.summary   = 'Adds comments to the solidus admin'
+  s.required_ruby_version = '>= 2.1'
 
   s.author    = 'Rails Dog'
   s.email     = 'gems@railsdog.com'
