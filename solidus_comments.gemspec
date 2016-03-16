@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'solidus_core', ["~> 1.0"]
   s.add_runtime_dependency 'solidus_backend', ["~> 1.0"]
   s.add_runtime_dependency 'solidus_api', ["~> 1.0"]
+  s.add_runtime_dependency 'deface'
   s.add_dependency 'acts_as_commentable', '4.0.1'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'sqlite3'
