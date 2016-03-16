@@ -1,3 +1,4 @@
 *.swp
 spec/dummy
 coverage
+Gemfile.lock
