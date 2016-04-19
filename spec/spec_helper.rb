@@ -31,4 +31,6 @@ RSpec.configure do |config|
 
   # because database cleaner
   config.use_transactional_fixtures = false
+
+  config.include FeatureHelper, type: :feature
 end
