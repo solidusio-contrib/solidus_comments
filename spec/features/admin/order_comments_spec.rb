@@ -9,7 +9,7 @@ RSpec.feature 'Order Comments', :js do
 
   it "adding comments" do
     visit spree.comments_admin_order_path(order)
-    expect(page).to have_text('NO COMMENTS FOUND')
+    expect(page).to have_text(/No Comments found/i)
 
     fill_in 'Comment', with: 'A test comment.'
     click_button 'Add Comment'

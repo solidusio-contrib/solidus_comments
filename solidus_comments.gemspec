@@ -15,9 +15,10 @@ Gem::Specification.new do |s|
   s.require_path  = 'lib'
   s.requirements << 'none'
 
-  s.add_runtime_dependency 'solidus_core', ["~> 1.0"]
-  s.add_runtime_dependency 'solidus_backend', ["~> 1.0"]
-  s.add_runtime_dependency 'solidus_api', ["~> 1.0"]
+  solidus_version = ['>= 1.0', '< 3']
+  s.add_runtime_dependency 'solidus_core', solidus_version
+  s.add_runtime_dependency 'solidus_backend', solidus_version
+  s.add_runtime_dependency 'solidus_api', solidus_version
   s.add_runtime_dependency 'deface'
   s.add_dependency 'acts_as_commentable', '4.0.1'
   s.add_development_dependency 'rspec-rails'
