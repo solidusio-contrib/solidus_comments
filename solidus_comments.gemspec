@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform  = Gem::Platform::RUBY
   s.name      = 'solidus_comments'
-  s.version   = '1.0.0'
+  s.version   = '1.0.1'
   s.summary   = 'Adds comments to the solidus admin'
   s.required_ruby_version = '>= 2.1'
 
