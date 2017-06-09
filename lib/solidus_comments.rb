@@ -1,5 +1,6 @@
 require 'spree_api'
 require 'spree_backend'
-require 'spree_core'
+require 'solidus_core'
+require 'solidus_support'
 require 'acts_as_commentable'
 require 'solidus_comments/engine'
