@@ -1,36 +1,16 @@
-# Configure Rails Environment
-ENV["RAILS_ENV"] = "test"
+ENV["RAILS_ENV"] ||= "test"
 
+require File.expand_path("../dummy/config/environment.rb", __FILE__)
 
-begin
-  require File.expand_path('../dummy/config/environment', __FILE__)
-rescue LoadError
-  fail 'Could not load dummy application. Please ensure you have run `bundle exec rake test_app`'
-end
+require "solidus_support/extension/feature_helper"
 
-
-require 'rspec/rails'
-require 'pry'
-
-# Requires supporting ruby files with custom matchers and macros, etc,
-# in spec/support/ and its subdirectories.
-Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |file| require file }
+Dir[File.join(File.dirname(__FILE__), "support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
-  # == Mock Framework
-  #
-  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
-  #
-  # config.mock_with :mocha
-  # config.mock_with :flexmock
-  # config.mock_with :rr
-  config.mock_with :rspec
+  config.infer_spec_type_from_file_location!
+  config.raise_errors_for_deprecations!
 
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
-  # because database cleaner
-  config.use_transactional_fixtures = false
+  config.example_status_persistence_file_path = "./spec/examples.txt"
 
   config.include FeatureHelper, type: :feature
 end
