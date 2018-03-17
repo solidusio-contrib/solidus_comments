@@ -20,7 +20,7 @@ Installation
 
 Add the following to your Gemfile (or check Versionfile for Solidus versions requirements):
 
-    gem "solidus_comments"
+    gem "solidus_comments", github: 'solidusio-contrib/solidus_comments', branch: 'master'
 
 Run:
 
