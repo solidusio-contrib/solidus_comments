@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'factory_bot'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'poltergeist'
-  s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'sqlite3'
 end
