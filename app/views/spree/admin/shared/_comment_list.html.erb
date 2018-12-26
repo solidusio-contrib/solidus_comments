@@ -8,16 +8,16 @@
   <thead>
     <tr>
       <th><%= "#{t('spree.date')}/#{t('spree.time')}" %></th>
-      <th><%= Spree.t(:type) %></th>
-      <th><%= Spree.t(:commenter) %></th>
-      <th><%= Spree.t(:comment) %></th>
+      <th><%= I18n.t('spree.type') %></th>
+      <th><%= I18n.t('spree.commenter') %></th>
+      <th><%= I18n.t('spree.comment') %></th>
     </tr>
   </thead>
   <tbody>
     <% commentable.comments.reverse.each_with_index do |comment, index| %>
       <tr class="<%= cycle('odd', 'even')%>">
         <td class='align-center'><%= pretty_time(comment.created_at) %></td>
-        <td class='align-center'><%= comment.comment_type.try(:name) || Spree.t(:none) %></td>
+        <td class='align-center'><%= comment.comment_type.try(:name) || I18n.t('spree.none') %></td>
         <td class='align-center'><%= comment.user.try(:email) %></td>
         <td><%= comment.comment.html_safe %></td>
       </tr>
