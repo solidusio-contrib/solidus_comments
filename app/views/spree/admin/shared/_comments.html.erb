@@ -2,7 +2,7 @@
   <%= render 'spree/admin/shared/comment_list', :commentable => commentable %>
 <% else %>
   <div class="alpha twelve columns no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: I18n.t(:comments, scope: 'spree')) %>
+    <%= I18n.t('spree.no_resource_found', resource: I18n.t(:comments, scope: 'spree')) %>
   </div>
 <% end %>
 
@@ -14,18 +14,18 @@
 
     <fieldset data-hook="admin_comment_form_fields" class="no-border-top fullwidth">
       <fieldset class="index no-border-bottom">
-        <legend align="center"><%= Spree.t(:add_comment) %></legend>
+        <legend align="center"><%= I18n.t('spree.add_comment') %></legend>
 
         <div data-hook="comment_fields" class="row">
           <div class="alpha twelve columns">
             <% if @comment_types.present? %>
               <div class="field">
-                <%= f.label :comment_type_id, Spree.t(:type) %>
+                <%= f.label :comment_type_id, I18n.t('spree.type') %>
                 <%= f.select :comment_type_id, @comment_types.map{|ct| [ct.name, ct.id]},{} ,:class => 'fullwidth' %>
               </div>
             <% end %>
             <div class="field">
-              <%= f.label :comment, Spree.t(:comment) %>
+              <%= f.label :comment, I18n.t('spree.comment') %>
               <%= f.text_area :comment, :style => 'height:150px;', :class => 'fullwidth' %>
             </div>
           </div>
@@ -35,7 +35,7 @@
       <div class="clear"></div>
 
       <div class="form-buttons filter-actions actions" data-hook="buttons">
-        <%= f.submit Spree.t(:add_comment) %>
+        <%= f.submit I18n.t('spree.add_comment') %>
       </div>
     </fieldset>
   <% end %>
