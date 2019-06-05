@@ -11,7 +11,7 @@
 
 Spree::Core::Engine.routes.draw do
   namespace :admin do
-    resources :comments
+    resources :comments, only: [:create, :update, :destroy]
     resources :comment_types
 
     resources :orders do
