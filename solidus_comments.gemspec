@@ -1,4 +1,3 @@
-# encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform  = Gem::Platform::RUBY
   s.name      = 'solidus_comments'
@@ -6,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary   = 'Adds comments to the solidus admin'
   s.required_ruby_version = '>= 2.1'
 
-  s.author    =  [ 'Rails Dog', 'Solidus Contrib' ]
+  s.author    = ['Rails Dog', 'Solidus Contrib']
   s.email     = 'contact+comments@solidus.io'
   s.homepage  = 'https://github.com/solidusio-contrib/solidus_comments'
 
@@ -16,19 +15,19 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   solidus_version = ['>= 1.0', '< 3']
-  s.add_dependency 'solidus_core', solidus_version
-  s.add_dependency 'solidus_backend', solidus_version
-  s.add_dependency 'solidus_api', solidus_version
-  s.add_dependency 'deface'
 
   s.add_dependency 'acts_as_commentable', '4.0.1'
+  s.add_dependency 'deface'
+  s.add_dependency 'solidus_api', solidus_version
+  s.add_dependency 'solidus_backend', solidus_version
+  s.add_dependency 'solidus_core', solidus_version
 
   s.add_development_dependency 'capybara', '~> 2.18'
   s.add_development_dependency 'capybara-screenshot'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_bot'
   s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'poltergeist'
+  s.add_development_dependency 'puma'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'sqlite3', '~> 1.3.6'
