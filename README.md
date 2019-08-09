@@ -1,7 +1,7 @@
 Solidus Comments
 ==============
 
-[![Build Status](https://travis-ci.org/solidusio-contrib/solidus_comments.svg?branch=master)](https://travis-ci.org/solidusio-contrib/solidus_comments)
+[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_comments.svg?style=svg)](https://circleci.com/gh/solidusio-contrib/solidus_comments)
 
 Solidus Comments is an extension for Solidus to allow commenting on different models via the
 admin ui and currently supports Orders & Shipments.
