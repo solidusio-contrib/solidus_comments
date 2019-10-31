@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   solidus_version = ['>= 1.0', '< 3']
 
-  s.add_dependency 'acts_as_commentable', '4.0.1'
+  s.add_dependency 'acts_as_commentable', '4.0.2'
   s.add_dependency 'deface'
   s.add_dependency 'solidus_api', solidus_version
   s.add_dependency 'solidus_backend', solidus_version
