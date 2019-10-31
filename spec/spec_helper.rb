@@ -2,10 +2,12 @@
 
 ENV["RAILS_ENV"] ||= "test"
 
+require "solidus_support/extension/coverage"
+
 require File.expand_path('dummy/config/environment.rb', __dir__)
 
-require "webdrivers"
 require "solidus_support/extension/feature_helper"
+require "webdrivers"
 
 Dir[File.join(File.dirname(__FILE__), "support/**/*.rb")].each { |f| require f }
 
