@@ -8,3 +8,7 @@ module FeatureHelper
     admin
   end
 end
+
+RSpec.configure do |config|
+  config.include FeatureHelper, type: :feature
+end

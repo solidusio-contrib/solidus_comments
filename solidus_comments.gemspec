@@ -24,12 +24,10 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'capybara', '~> 2.18'
   s.add_development_dependency 'capybara-screenshot'
-  s.add_development_dependency 'chromedriver-helper', '~> 1.2' unless ENV['CI']
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_bot'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'puma'
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'selenium-webdriver'
-  s.add_development_dependency 'sqlite3', '~> 1.3.6'
+  s.add_development_dependency 'webdrivers'
 end
