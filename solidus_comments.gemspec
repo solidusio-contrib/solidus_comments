@@ -16,13 +16,13 @@ Gem::Specification.new do |s|
 
   solidus_version = ['>= 1.0', '< 3']
 
-  s.add_dependency 'acts_as_commentable', '4.0.2'
-  s.add_dependency 'deface'
+  s.add_dependency 'acts_as_commentable', '~> 4.0.2'
+  s.add_dependency 'deface', '~> 1.5.3'
   s.add_dependency 'solidus_api', solidus_version
   s.add_dependency 'solidus_backend', solidus_version
   s.add_dependency 'solidus_core', solidus_version
 
-  s.add_development_dependency 'capybara', '~> 2.18'
+  s.add_development_dependency 'capybara'
   s.add_development_dependency 'capybara-screenshot'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_bot'
