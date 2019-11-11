@@ -14,9 +14,9 @@ end
 
 case ENV['DB']
 when 'postgres'
-  gem 'pg', '~> 0.21'
+  gem 'pg'
 when 'mysql'
-  gem 'mysql2', '~> 0.4.10'
+  gem 'mysql2'
 else
   gem 'sqlite3'
 end
