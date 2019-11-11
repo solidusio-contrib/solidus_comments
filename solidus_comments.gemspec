@@ -23,12 +23,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'solidus_core', solidus_version
   s.add_dependency 'solidus_support', '~> 0.3.3'
 
-  s.add_development_dependency 'capybara'
-  s.add_development_dependency 'capybara-screenshot'
-  s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'factory_bot'
-  s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'puma'
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'webdrivers'
+  s.add_development_dependency 'solidus_extension_dev_tools'
 end
