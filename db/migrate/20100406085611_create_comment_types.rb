@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCommentTypes < SolidusSupport::Migration[4.2]
   def self.up
     create_table :comment_types do |t|

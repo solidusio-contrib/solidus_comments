@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusComments
   class Engine < Rails::Engine
     engine_name 'solidus_comments'
@@ -15,6 +17,6 @@ module SolidusComments
       end
     end
 
-    config.to_prepare &method(:activate).to_proc
+    config.to_prepare(&method(:activate).to_proc)
   end
 end

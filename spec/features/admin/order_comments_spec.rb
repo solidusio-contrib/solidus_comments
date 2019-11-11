@@ -1,10 +1,10 @@
-require 'spec_helper'
+# frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength
-RSpec.feature 'Order Comments', :js do
+require 'spec_helper'
+RSpec.describe 'Order Comments', :js do
   let!(:order) { create(:completed_order_with_totals) }
 
-  before :each do
+  before do
     login_as_admin
   end
 
@@ -50,12 +50,11 @@ RSpec.feature 'Order Comments', :js do
         .with(:manage, Spree::OrderCancellations).and_return(true)
     end
 
-    it 'should not display form' do
+    it 'does not display form' do
       visit spree.comments_admin_order_path(order)
 
       expect(page).to have_text(/No Comments found/i)
-      expect(page).to_not have_text 'Add Comment'
+      expect(page).not_to have_text 'Add Comment'
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

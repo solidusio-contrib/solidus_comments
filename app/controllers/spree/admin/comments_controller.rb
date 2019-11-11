@@ -1,7 +1,13 @@
-class Spree::Admin::CommentsController < Spree::Admin::ResourceController
-  private
+# frozen_string_literal: true
 
-  def location_after_save
-    request.referer
+module Spree
+  module Admin
+    class CommentsController < Spree::Admin::ResourceController
+      private
+
+      def location_after_save
+        request.referer
+      end
+    end
   end
 end

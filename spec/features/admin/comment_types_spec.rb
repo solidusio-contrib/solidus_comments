@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
-RSpec.feature 'Comment Types', :js do
+RSpec.describe 'Comment Types', :js do
   before { login_as_admin }
 
   it 'adds a menu item in settings' do
