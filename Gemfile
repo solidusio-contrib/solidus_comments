@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 branch = ENV.fetch('SOLIDUS_BRANCH', 'master')
@@ -9,16 +11,18 @@ gem 'solidus_auth_devise'
 if branch == 'master' || Gem::Version.new(branch[1..-1]) >= Gem::Version.new('2.10.0')
   gem 'rails', '~> 6.0.0'
 else
-  gem 'rails', '~> 5.2.0'
+  gem 'rails', '~> 5.2.0' # rubocop:disable Bundler/DuplicatedGem
 end
 
 case ENV['DB']
 when 'postgres'
-  gem 'pg', '~> 0.21'
+  gem 'pg'
 when 'mysql'
-  gem 'mysql2', '~> 0.4.10'
+  gem 'mysql2'
 else
   gem 'sqlite3'
 end
+
+gem 'solidus_extension_dev_tools', github: 'solidusio-contrib/solidus_extension_dev_tools'
 
 gemspec

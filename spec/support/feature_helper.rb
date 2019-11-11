@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FeatureHelper
   def login_as_admin
     admin = create(:admin_user, password: 'test123', password_confirmation: 'test123')
