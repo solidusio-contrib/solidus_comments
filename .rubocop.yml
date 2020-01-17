@@ -1,17 +1,2 @@
 require:
-  - solidus_extension_dev_tools/rubocop
-
-inherit_gem:
-  solidus_extension_dev_tools: .rubocop.extension.yml
-
-AllCops:
-  Exclude:
-    - spec/dummy/**/*
-
-RSpec/DescribeClass:
-  Exclude:
-    - spec/features/**/*
-
-RSpec/MultipleExpectations:
-  Exclude:
-    - spec/features/**/*
+  - solidus_dev_support/rubocop
