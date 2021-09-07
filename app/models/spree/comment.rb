@@ -15,5 +15,7 @@ module Spree
 
     # NOTE: Comments belong to a user
     belongs_to :user
+
+    validates :comment, presence: true
   end
 end

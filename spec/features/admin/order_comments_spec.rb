@@ -8,9 +8,12 @@ RSpec.describe 'Order Comments', :js do
     login_as_admin
   end
 
-  it 'adding comments' do
+  it 'adding comments to an order' do
     visit spree.comments_admin_order_path(order)
     expect(page).to have_text(/No Comments found/i)
+
+    click_button 'Add Comment'
+    expect(page).to have_text('Comment can\'t be blank')
 
     fill_in 'Comment', with: 'A test comment.'
     click_button 'Add Comment'
