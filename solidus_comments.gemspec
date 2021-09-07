@@ -35,4 +35,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'solidus_support', '~> 0.5'
 
   s.add_development_dependency 'solidus_dev_support'
+  s.add_development_dependency 'shoulda-matchers', '~> 4.0'
 end
