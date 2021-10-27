@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+
 RSpec.describe 'Order Comments', :js do
-  let!(:order) { create(:completed_order_with_totals) }
+  let!(:order) { FactoryBot.create(:completed_order_with_totals) }
 
   before do
     login_as_admin
