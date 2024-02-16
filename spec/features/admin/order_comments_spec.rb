@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# FIXME:
+# None of these tests exercise creating or viewing comments with an assigned
+# comment type.
+#
 require 'spec_helper'
 RSpec.describe 'Order Comments', :js do
   let!(:order) { create(:completed_order_with_totals) }
