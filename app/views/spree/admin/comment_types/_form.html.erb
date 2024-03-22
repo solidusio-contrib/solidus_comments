@@ -7,7 +7,15 @@
 
   <%= f.field_container :applies_to do %>
     <%= f.label :applies_to, I18n.t('spree.applies_to') %><br />
-    <%= f.text_field :applies_to, :value => f.object.nil? ? 'Order' : f.object.applies_to, :class => 'fullwidth title' %>
-    <%= error_message_on :comment_type, :applies_to%>
+    <%
+      # FIXME:
+      # This text field is an error prone. We should provide a drop-down menu
+      # that only lists models that have `acts_as_commentable` enabled on them.
+      #
+    %>
+    <%= f.text_field :applies_to,
+      class: "fullwidth title",
+      value: (f.object&.applies_to || Spree::CommentType::ORDER) %>
+    <%= error_message_on :comment_type, :applies_to %>
   <% end %>
 </div>

@@ -1,0 +1,1 @@
+require "acts_as_commentable/commentable_methods"
