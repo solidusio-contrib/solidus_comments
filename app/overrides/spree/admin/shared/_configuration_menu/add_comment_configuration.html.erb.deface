@@ -1,0 +1,4 @@
+<!-- insert_bottom "[data-hook='admin_configurations_sidebar_menu']" -->
+
+<%= configurations_sidebar_menu_item I18n.t("spree.comment_types"),
+  admin_comment_types_path %>

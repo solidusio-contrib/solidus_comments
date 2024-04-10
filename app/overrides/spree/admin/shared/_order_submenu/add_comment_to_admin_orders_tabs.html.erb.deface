@@ -1,0 +1,13 @@
+<!-- insert_bottom "[data-hook='admin_order_tabs'], #admin_order_tabs[data-hook]" -->
+
+<li <%= 'class="active"' if (defined? current and current == 'Comments') %>>
+  <% if @order.comments.any? %>
+    <%= link_to_with_icon "comment-o",
+       I18n.t("spree.comments_count", count: @order.comments.count),
+       comments_admin_order_url(@order) %>
+  <% else %>
+    <%= link_to_with_icon "comment-o",
+       I18n.t("spree.comments"),
+       comments_admin_order_url(@order) %>
+  <% end %>
+</li>

@@ -8,7 +8,7 @@ RSpec.describe 'Comment Types', :js do
   it 'adds a menu item in settings' do
     visit spree.edit_admin_general_settings_path
 
-    # uppercase < v1.2, sentence case >= v1.3
+    expect(page).to have_current_path "/admin/stores"
     expect(page).to have_text(/Comment Types/i)
   end
 

@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# FIXME:
+# None of these tests exercise creating or viewing comments with an assigned
+# comment type.
+#
 require 'spec_helper'
 RSpec.describe 'Order Comments', :js do
   let!(:order) { create(:completed_order_with_totals) }
@@ -18,9 +22,9 @@ RSpec.describe 'Order Comments', :js do
     fill_in 'Comment', with: 'A test comment.'
     click_button 'Add Comment'
 
-    # uppercase < v1.2, sentence case >= v1.3
-    expect(page).to have_text(/Comments \(1\)/i)
-    expect(page).to have_text('A test comment.')
+    within "table.solidus-comments-comment-list" do
+      expect(page).to have_text "A test comment"
+    end
   end
 
   context 'without permission' do
